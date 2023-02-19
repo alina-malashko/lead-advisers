@@ -1,0 +1,106 @@
+@import '../../static/scss/variables';
+
+.form {
+  width: 100%;
+  position: relative;
+  &__input {
+    font-family: 'Roboto', sans-serif;
+    background-color: $background-main;
+    border-radius: 40px;
+    font-size: 18px;
+    line-height: 1.35;
+    font-weight: 400;
+    padding: 16px 27px;
+    width: 100%;
+    height: 59px;
+    outline: none;
+    caret-color: $input-text-black;
+    color: $input-text-black;
+    -webkit-text-fill-color: $input-text-black;
+    border: 3px solid $background-main;
+    box-sizing: border-box;
+    &::placeholder {
+      font-family: 'Roboto', sans-serif;
+      font-size: 100%;
+      line-height: 1.5;
+      font-weight: 400;
+      color: $input-text-black;
+      -webkit-text-fill-color: $input-text-black;
+      user-select: none;
+    }
+    &__error {
+      border: 3px solid $input-stroke-error;
+    }
+    @media(max-width: 1365px) {
+      font-size: 0.875em;
+      padding: 10px 20px;
+      height: 41px;
+    }
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    top: 8px;
+    right: 8px;
+    background-color: $link-red;
+    border-radius: 50%;
+    width: 43px;
+    height: 43px;
+    padding: 11px 11px 12px 12px;
+    outline: none;
+    border: none;
+    user-select: none;
+    cursor: pointer;
+    @media(max-width: 1365px) {
+      top: 4px;
+      right: 4px;
+      width: 33px;
+      height: 33px;
+      padding: 8.44px 8.44px 9.21px 9.21px;
+      & svg {
+        width: 15.35px;
+        height: 15.35px;
+      }
+    }
+  }
+  &__error {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $text-error;
+    margin-top: 4px;
+    @media(max-width: 1365px) {
+      font-size: 0.875em;
+      & svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
+
+.loader {
+  width: 20px;
+  height: 20px;
+  border: 3.5px solid $button-circle-main-bcg;
+  border-bottom-color: $button-main-slider;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  @media(max-width: 1365px) {
+    width: 15.35px;
+    height: 15.35px;
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

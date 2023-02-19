@@ -1,0 +1,67 @@
+@import '../../static/scss/variables';
+
+.overlay {
+  background-color: $background-modal-overlay;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  height: 370px;
+  border-radius: 2px;
+  background-color: $background-main;
+  position: relative;
+  flex: 0 0 320px;
+  padding: 97.47px 16px 69.62px;
+  &__close {
+    position: absolute;
+    top: 23.81px;
+    right: 15.58px;
+    cursor: pointer;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    &__title {
+      margin: 0 auto 28.84px;
+      font-size: 2em;
+      line-height: 1.04;
+      font-weight: 700;
+      color: $text-dark-blue;
+    }
+    &__subtitle {
+      margin: 0 0 29.84px 8px;
+      font-size: 0.89em;
+      line-height: 1.5;
+      font-weight: 400;
+      color: $text-black;
+    }
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $link-dark-blue;
+      border-radius: 40px;
+      width: 200px;
+      height: 59.68px;
+      margin: 0 auto;
+      padding: 16px 73px;
+      font-size: 1em;
+      line-height: 1.5;
+      font-weight: 400;
+      color: $text-white;
+      outline: none;
+      border: none;
+      user-select: none;
+      cursor: pointer;
+    }
+  }
+}
