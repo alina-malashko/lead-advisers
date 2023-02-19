@@ -1,13 +1,17 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-scroll';
+import { startTitleAnimation } from '../../redux/actions';
 import EmailForm from '../EmailForm/EmailForm';
 import Timer from '../Timer/Timer';
 import { SuccessPopUp } from '../popups/SuccessPopUp/SuccessPopUp';
 import { FailedPopUp } from '../popups/FailedPopUp/FailedPopUp';
+
 import logo from '../../static/images/logo.png';
 import styles from './MainPage.module.scss';
 
 const MainPage = () => {
+  const dispatch = useDispatch();
   const sentSuccessfully = useSelector((state) => state.popUpReducer.success);
   const failedToSend = useSelector((state) => state.popUpReducer.failed);
   return (
@@ -16,7 +20,7 @@ const MainPage = () => {
       <div className={styles.page__rightAngle} />
       <main className={styles.page__content}>
         <div className={styles.page__content__logo}>
-          <a href={window.location.href} title='main'>
+          <a href='/' title='main'>
             <img src={logo} alt='lead advisors' />
           </a>
         </div>
@@ -72,7 +76,14 @@ const MainPage = () => {
         <div className={styles.page__footer__form}>
           <EmailForm />
         </div>
-        <div className={styles.page__footer__link}>
+        <Link
+          to='events'
+          smooth={true}
+          duration={500}
+          //delay={200}
+          className={styles.page__footer__link}
+          onClick={() => dispatch(startTitleAnimation())}
+        >
           <span>
             Other Events
           </span>
@@ -98,7 +109,7 @@ const MainPage = () => {
               strokeLinejoin='round'
             />
           </svg>
-        </div>
+        </Link>
       </footer>
       {sentSuccessfully && <SuccessPopUp />}
       {failedToSend && <FailedPopUp />}

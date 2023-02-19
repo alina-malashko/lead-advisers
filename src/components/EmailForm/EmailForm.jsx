@@ -23,6 +23,7 @@ const EmailForm = () => {
             sp.append('n', user);
             sp.append('v', JSON.stringify(values.email.trim()));
             let response = await fetch(ajaxHandlerScript,{ method: 'post', body: sp });
+            console.log(response);
             dispatch(openSuccessModal());
           } catch (e) {
             console.error(e);

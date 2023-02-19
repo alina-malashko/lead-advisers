@@ -32,14 +32,14 @@
     text-align: center;
     &__title {
       margin: 0 auto 28.84px;
-      font-size: 2em;
+      font-size: 36px;
       line-height: 1.04;
       font-weight: 700;
       color: $text-dark-blue;
     }
     &__subtitle {
       margin: 0 0 29.84px 8px;
-      font-size: 0.89em;
+      font-size: 16px;
       line-height: 1.5;
       font-weight: 400;
       color: $text-black;
@@ -54,7 +54,7 @@
       height: 59.68px;
       margin: 0 auto;
       padding: 16px 73px;
-      font-size: 1em;
+      font-size: 18px;
       line-height: 1.5;
       font-weight: 400;
       color: $text-white;

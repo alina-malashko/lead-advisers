@@ -1,8 +1,10 @@
-import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import { popUpReducer } from './reducers/popUpReducer';
+import { animateTitleReducer } from './reducers/animateTitleReducer';
 
 const appReducer = combineReducers({
-  popUpReducer
+  popUpReducer,
+  animateTitleReducer
 });
 
 const rootReducer = (state, action) => {

@@ -32,7 +32,7 @@
       border: 3px solid $input-stroke-error;
     }
     @media(max-width: 1365px) {
-      font-size: 0.875em;
+      font-size: 14px;
       padding: 10px 20px;
       height: 41px;
     }
@@ -54,6 +54,10 @@
     border: none;
     user-select: none;
     cursor: pointer;
+    transition: all 200ms ease-out;
+    &:hover {
+      transform: scale(1.2);
+    }
     @media(max-width: 1365px) {
       top: 4px;
       right: 4px;
@@ -73,7 +77,7 @@
     color: $text-error;
     margin-top: 4px;
     @media(max-width: 1365px) {
-      font-size: 0.875em;
+      font-size: 14px;
       & svg {
         width: 16px;
         height: 16px;
