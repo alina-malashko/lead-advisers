@@ -80,7 +80,6 @@ const MainPage = () => {
           to='events'
           smooth={true}
           duration={500}
-          //delay={200}
           className={styles.page__footer__link}
           onClick={() => dispatch(startTitleAnimation())}
         >
