@@ -57,11 +57,11 @@
   }
   &__accordion {
     max-width: 1920px;
-    height: 682px;
+    height: 782px;
     margin: 0 auto;
     display: flex;
     gap: 4px;
-    padding: 0 108px;
+    padding: 0 108px 100px;
     font-family: 'SF Pro Display';
     @media(max-width: 1365px) {
       max-width: 688px;
